@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trader Calculator</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Trader Calculator</h1>
+      <button id="darkModeToggle">🌙</button>
+    </header>
+
+    <main>
+      <!-- Black Market Section -->
+      <section id="trader-one">
+        <h2>Black Market</h2>
+        
+        <!-- Buy Item Menu -->
+        <div class="menu">
+          <label for="black-market-buy-items">Buy Item:</label>
+          <select id="black-market-buy-items"></select>
+          <input type="number" id="black-market-buy-quantity" min="1" value="1" />
+          <button class="add-button" id="black-market-buy-add">ADD</button>
+        </div>
+        
+        <!-- Sell Item Menu -->
+        <div class="menu">
+          <label for="black-market-sell-items">Sell Item:</label>
+          <select id="black-market-sell-items"></select>
+          <input type="number" id="black-market-sell-quantity" min="1" value="1" />
+          <button class="add-button" id="black-market-sell-add">ADD</button>
+        </div>
+        
+        <!-- Receipt -->
+        <div class="receipt">
+          <h3>Receipt</h3>
+          
+          <!-- Buy Items Subheader -->
+          <h4>Buy Items</h4>
+          <ul id="black-market-buy-receipt"></ul>
+          <p>Total Buy Items: <span id="black-market-buy-count">0</span></p>
+          <p>Total Buy Price: <span id="black-market-buy-total">0©</span></p>
+          
+          <!-- Sell Items Subheader -->
+          <h4>Sell Items</h4>
+          <ul id="black-market-sell-receipt"></ul>
+          <p>Total Sell Items: <span id="black-market-sell-count">0</span></p>
+          <p>Total Sell Price: <span id="black-market-sell-total">0©</span></p>
+          
+          <button class="clear-receipt" onclick="clearReceipt('black-market')">Clear Receipt</button>
+        </div>
+      </section>
+
+      <!-- Atomic Bazaar Section -->
+      <section id="trader-two">
+        <h2>Atomic Bazaar</h2>
+        
+        <!-- Buy Item Menu -->
+        <div class="menu">
+          <label for="atomic-bazaar-buy-items">Buy Item:</label>
+          <select id="atomic-bazaar-buy-items"></select>
+          <input type="number" id="atomic-bazaar-buy-quantity" min="1" value="1" />
+          <button class="add-button" id="atomic-bazaar-buy-add">ADD</button>
+        </div>
+        
+        <!-- Sell Item Menu -->
+        <div class="menu">
+          <label for="atomic-bazaar-sell-items">Sell Item:</label>
+          <select id="atomic-bazaar-sell-items"></select>
+          <input type="number" id="atomic-bazaar-sell-quantity" min="1" value="1" />
+          <button class="add-button" id="atomic-bazaar-sell-add">ADD</button>
+        </div>
+        
+        <!-- Receipt -->
+        <div class="receipt">
+          <h3>Receipt</h3>
+          
+          <!-- Buy Items Subheader -->
+          <h4>Buy Items</h4>
+          <ul id="atomic-bazaar-buy-receipt"></ul>
+          <p>Total Buy Items: <span id="atomic-bazaar-buy-count">0</span></p>
+          <p>Total Buy Price: <span id="atomic-bazaar-buy-total">0©</span></p>
+          
+          <!-- Sell Items Subheader -->
+          <h4>Sell Items</h4>
+          <ul id="atomic-bazaar-sell-receipt"></ul>
+          <p>Total Sell Items: <span id="atomic-bazaar-sell-count">0</span></p>
+          <p>Total Sell Price: <span id="atomic-bazaar-sell-total">0©</span></p>
+          
+          <button class="clear-receipt" onclick="clearReceipt('atomic-bazaar')">Clear Receipt</button>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+        <div class="overall-totals">
+    <h3>Overall Totals</h3>
+    <p>Total Items Bought: <span id="total-items-bought">0</span></p>
+    <p>Total Items Sold: <span id="total-items-sold">0</span></p>
+    <p>Overall Total Price: <span id="overall-total-price">0©</span></p>
+        </div>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
